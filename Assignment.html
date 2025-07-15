@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Content Loader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        #network-info {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        #content-area img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        #loading-status {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+        #cellular-prompt {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #ffe0b2; 
+            border: 1px solid #ff9800;
+            display: none; 
+        }
+        #cellular-prompt button {
+            margin-left: 10px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adaptive Content Loader</h1>
+
+    <div id="network-info">
+        <p><strong>Network Type:</strong> <span id="network-type">N/A</span></p>
+        <p><strong>Effective Type:</strong> <span id="effective-type">N/A</span></p>
+    </div>
+
+    <div id="loading-status"></div>
+
+    <div id="content-area">
+        <img id="adaptive-image" src="" alt="Adaptive content based on network speed">
+    </div>
+
+    <div id="cellular-prompt">
+        <p>You are on a cellular connection. Would you like to load the high-resolution image (may use more data)?</p>
+        <button id="load-high-res-btn">Yes, Load High-Res</button>
+        <button id="cancel-high-res-btn">No, Stick with Low-Res</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
